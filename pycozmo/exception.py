@@ -9,6 +9,7 @@ __all__ = [
     "PyCozmoConnectionError",
     "ConnectionTimeout",
     "Timeout",
+    "NoSpace",
 ]
 
 
@@ -25,4 +26,8 @@ class ConnectionTimeout(PyCozmoConnectionError):
 
 
 class Timeout(PyCozmoException):
-    """ Timeout. """
+    """ Operation timed out. """
+
+
+class NoSpace(PyCozmoException):
+    """ Out of space. """
